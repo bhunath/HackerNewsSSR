@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import classes from './Layout.module.css'
 import Footer from '../../Footer/Footer'
 import HackerNewsLogo from '../../../assets/y18.gif'
-import {Route} from 'react-router-dom'
+import {Route,Link} from 'react-router-dom'
 import StoriesContainer from '../../../containers/StoriesContainer/StoriesContainer'
 import AuthContext from '../../../context/app-context';
 import Login from '../../Login/Login'
@@ -21,15 +21,15 @@ const Layout = (props) => {
                 <header className={classes.Header} id="header">
                     <nav>
                         <ul>
-                            <li className={classes.Logo}><a href="/"><img src={HackerNewsLogo} alt="HN"></img></a></li>
-                            <li className={classes.HackerNews}><a href="/news"><strong>Hacker News </strong></a></li>
-                            <li ><a href="/newest">new |</a></li>
-                            <li><a href="/front">past |</a></li>
-                            <li><a href="/newcomments">comment |</a></li>
-                            <li><a href="/ask">ask |</a></li>
-                            <li><a href="/show">show |</a></li>
-                            <li><a href="/jobs">jobs |</a></li>
-                            <li><a href="/submit">submit</a></li>
+                            <li className={classes.Logo}><Link to="/"><img src={HackerNewsLogo} alt="HN"></img></Link></li>
+                            <li className={classes.HackerNews}><Link to="/news"><strong>Hacker News </strong></Link></li>
+                            <li ><Link to="/newest">new |</Link></li>
+                            <li><Link to="/front">past |</Link></li>
+                            <li><Link to="/newcomments">comment |</Link></li>
+                            <li><Link to="/ask">ask |</Link></li>
+                            <li><Link to="/show">show |</Link></li>
+                            <li><Link to="/jobs">jobs |</Link></li>
+                            <li><Link to="/submit">submit</Link></li>
                             <li className={classes.Login}><a  href="/login"><strong>login</strong></a></li>
                         </ul>
                     </nav>

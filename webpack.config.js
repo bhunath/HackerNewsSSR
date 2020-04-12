@@ -9,7 +9,7 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
         chunkFilename: '[id].js',
-        publicPath: ''
+        publicPath: '/'
     },
     resolve: {
         extensions: ['.js', '.jsx']
@@ -60,7 +60,8 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: __dirname + '/src/index.html',
             filename: 'index.html',
-            inject: 'body'
+            inject: 'body',
+            favicon: "./src/assets/y18.gif"
         })
     ]
 };
